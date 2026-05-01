@@ -1,14 +1,14 @@
 [
   {
     "id": 1,
-    "name": "UV Protection Sunglasses",
+    "name": "UVProtection Sunglas",
     "brand": "SunShade",
     "price": 29.99,
     "rating": 4.8,
     "stock": 18,
     "category": "Accessories",
     "description": "Stylish UV protection sunglasses perfect for beach trips and sunny outdoor adventures.",
-    "image": "/products/sunglasses-1.png"
+    "image": "https://i.ibb.co.com/Z6r1M6dq/ZFMBKPE3.webp"
   },
   {
     "id": 2,
