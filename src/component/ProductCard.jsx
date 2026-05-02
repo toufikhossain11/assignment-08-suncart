@@ -7,13 +7,13 @@ const ProductCard = ({ data }) => {
         <div>
             <div className="card w-80 h-70 p-3  bg-white border border-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all text-center">
                 <div className="relative w-full aspect-auto">
-                    <Image
+                    {/* <Image
                         src={data.image}
                         alt="banner"
                         fill
                         loading="eager"
                         className="object-cover rounded-xl"
-                    />
+                    /> */}
                 </div>
                 <div className="card-body">
                     <h2 className="font-bold text-xl text-slate-900">{data.name}</h2>

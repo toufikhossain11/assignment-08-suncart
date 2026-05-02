@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className=''>
-            <div className=" navbar bg-base-100 shadow-sm max-w-7xl mx-auto">
+        <div className='bg-slate-900 '>
+            <div className=" navbar  max-w-7xl mx-auto shadow-sm">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -12,15 +13,9 @@ const Navbar = () => {
                         <ul
                             tabIndex="-1"
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><a>Home</a></li>
-                            <li>
-                                <a>Products</a>
-                                {/* <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul> */}
-                            </li>
-                            <li><a>My Profile</a></li>
+                            <Link href={'/'}><li><a>Home</a></li></Link>
+                            <Link href={'/products'}><li><a>Products</a></li></Link>
+                            <Link href={'/profile'}><li><a>My Profile</a></li></Link>
                         </ul>
                     </div>
                     <a className="text-3xl font-extrabold">
@@ -30,10 +25,10 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Products</a></li>
-                    
-                        <li><a>My Profile</a></li>
+                        <Link href={'/'}><li><a>Home</a></li></Link>
+                        <Link href={'/products'}><li><a>Products</a></li></Link>
+                        <Link href={'/profile'}><li><a>My Profile</a></li></Link>
+
                     </ul>
                 </div>
                 <div className="navbar-end">

@@ -18,9 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html className={`${geistSans.className}`}>
       <body className="bg-[#FFF8E7]">
-        <Navbar/>
+        <header className="sticky top-0 z-50">
+          <Navbar />
+        </header>
         <main className="max-w-7xl mx-auto">{children}</main>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
