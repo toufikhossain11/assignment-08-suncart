@@ -1,13 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { CiStar } from "react-icons/ci";
-
 
 const ProductCard = ({ data }) => {
     return (
         <div>
             <div className="card w-80 h-70 p-3  bg-white border border-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all text-center">
                 <div className="relative w-full aspect-auto">
+                    <Image
+                        src={data.image}
+                        width={400}
+                        height={500}
+                        alt="Picture of the author"
+                    />
                     {/* <Image
                         src={data.image}
                         alt="banner"
@@ -22,14 +26,14 @@ const ProductCard = ({ data }) => {
                         <div>
                             <p className="text-orange-500 font-bold">$ {data.price}</p>
                         </div>
-                       
-                             <p className="text-yellow-400 font-bold"> {data.rating}</p>
-                        
+
+                        <p className="text-yellow-400 font-bold"> {data.rating}</p>
+
                     </div>
                     <div className="">
-                       <Link href={`/products/${data.id}`}>
-                        <button className="btn w-full border-0 bg-slate-900 hover:bg-orange-500 text-white">View Details</button>
-                       </Link>
+                        <Link href={`/products/${data.id}`}>
+                            <button className="btn w-full border-0 bg-slate-900 hover:bg-orange-500 text-white">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>

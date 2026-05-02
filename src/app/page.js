@@ -7,17 +7,17 @@ import Image from "next/image";
 const Home = async () => {
   const datas = await jsonData()
   const productData = datas.slice(0, 3)
-
+// className=' relative w-11/12 aspect-[16/7] md:aspect-[16/6]   overflow-hidden rounded-3xl mx-auto '
   return (
     <div >
       {/* Banner site */}
-      <div className=' relative w-11/12 aspect-[16/7] md:aspect-[16/6]   overflow-hidden rounded-3xl mx-auto '>
+      <div >
         <Image
-          src="/bannar-01.png"
+          src="/banner-01.png"
+          width={1300 }
+          height={400}
           alt="banner"
-          fill
-          loading="eager"
-          className="object-cover "
+          className="rounded-xl my-3 lg:mx-0"
         />
       </div>
       {/* Product Card site */}

@@ -17,7 +17,7 @@ const detailsPage = async ({ params }) => {
       
         <div className="relative w-full h-[300px] md:h-[450px] rounded-3xl overflow-hidden bg-orange-50">
           <Image
-            src="/products/bag-1.png"
+            src={detailsData.image}
             alt="product"
             fill
             className="object-contain hover:scale-105 transition-transform duration-500"
