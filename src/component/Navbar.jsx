@@ -1,7 +1,9 @@
+"use client";
 import Link from 'next/link';
-import React from 'react';
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const pathname = usePathname();
     return (
         <div className='bg-slate-900 '>
             <div className=" navbar  max-w-7xl mx-auto shadow-sm">
@@ -23,11 +25,20 @@ const Navbar = () => {
                         <span className="text-sky-400">Cart</span>
                     </a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <Link href={'/'}><li><a>Home</a></li></Link>
-                        <Link href={'/products'}><li><a>Products</a></li></Link>
-                        <Link href={'/profile'}><li><a>My Profile</a></li></Link>
+                <div className="navbar-center hidden lg:flex ">
+                    <ul className="menu menu-horizontal px-5">
+                        <Link href={'/'} className={` rounded-xl ${pathname === "/"
+                            ? "bg-orange-500 font-bold text-white"
+                            : "text-white font-bold hover:bg-orange-500"
+                            }`}><li><a>Home</a></li></Link>
+                        <Link href={'/products'} className={` rounded-xl ${pathname === "/products"
+                            ? "bg-orange-500 font-bold text-white"
+                            : "text-white font-bold hover:bg-orange-500"
+                            }`}><li><a>Products</a></li></Link>
+                        <Link href={'/profile'} className={` rounded-xl ${pathname === "/profile"
+                            ? "bg-orange-500 font-bold text-white"
+                            : "text-white font-bold hover:bg-orange-500"
+                            }`}><li><a>My Profile</a></li></Link>
 
                     </ul>
                 </div>

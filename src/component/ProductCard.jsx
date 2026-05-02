@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CiStar } from "react-icons/ci";
 
 
@@ -26,7 +27,9 @@ const ProductCard = ({ data }) => {
                         
                     </div>
                     <div className="">
+                       <Link href={`/products/${data.id}`}>
                         <button className="btn w-full border-0 bg-slate-900 hover:bg-orange-500 text-white">View Details</button>
+                       </Link>
                     </div>
                 </div>
             </div>
