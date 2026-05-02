@@ -3,8 +3,8 @@ import React from 'react';
 
 const TopBrands = () => {
     return (
-        <div className='grid grid-cols-1 px-12 lg:px-0 lg:grid-cols-3 gap-4 '>
-            <Card className="w-[320px] bg-white borderborder-orange-100 shadow-md" variant="secondary">
+        <div className='grid grid-cols-1 px-27 lg:px-0 lg:grid-cols-4 gap-4 '>
+            <Card className="w-70  bg-white borderborder-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all" variant="secondary ">
                 <p>🕶️</p>
         <Card.Header>
           <Card.Title className='text-slate-900 text-xl font-bold pb-3'>Premium UV Protection</Card.Title>
@@ -14,7 +14,7 @@ const TopBrands = () => {
           <p >Use to draw moderate attention</p>
         </Card.Description> */}
       </Card>
-            <Card className="w-[320px] bg-white borderborder-orange-100 shadow-md" variant="secondary">
+            <Card className="w-70 bg-white borderborder-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all" variant="secondary">
                 <p>🧴</p>
         <Card.Header>
           <Card.Title className='text-slate-900 text-xl font-bold pb-3'>Healthy Summer Skin</Card.Title>
@@ -24,7 +24,7 @@ const TopBrands = () => {
           <p >Use to draw moderate attention</p>
         </Card.Description> */}
       </Card>
-            <Card className="w-[320px] bg-white borderborder-orange-100 shadow-md" variant="secondary">
+            <Card className="w-70 bg-white borderborder-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all" variant="secondary">
                 <p>👕</p>
         <Card.Header>
           <Card.Title className='text-slate-900 text-xl font-bold pb-3'>Summer Style Redefined</Card.Title>
@@ -34,7 +34,7 @@ const TopBrands = () => {
           <p >Use to draw moderate attention</p>
         </Card.Description> */}
       </Card>
-            <Card className="w-[320px] bg-white borderborder-orange-100 shadow-md" variant="secondary">
+            <Card className="w-70 bg-white borderborder-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all" variant="secondary">
                 <p>🏖️</p>
         <Card.Header>
           <Card.Title className='text-slate-900 text-xl font-bold pb-3'>Comfort Meets Style</Card.Title>

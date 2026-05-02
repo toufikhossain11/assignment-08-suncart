@@ -6,14 +6,15 @@ const ProductCard = ({ data }) => {
     return (
         <div>
             <div className="p-3 w-76  h-106  bg-white border border-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all text-center rounded-xl">
-                <Link href={`/products/${data.id}`} className="relative w-full aspect-square">
-                    <Image
+                <Link href={`/products/${data.id}`} >
+                    <div className="relative w-full aspect-square">
+                        <Image
                         src={data.image}
-                        width={300}
-                        height={100}
+                        fill
                         alt={data.name}
                         className="object-cover rounded-xl"
                     />
+                    </div>
                 </Link>
                 <div className="p-3">
                     <Link href={`/products/${data.id}`}>
