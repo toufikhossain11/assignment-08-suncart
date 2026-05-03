@@ -4,7 +4,7 @@ import jsonData from "@/jsonData";
 const productsPage = async () => {
     const datas = await jsonData()
     return (
-        <div>
+        <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl text-left py-7 font-bold text-slate-900">All Products</h2>
         
             <div className="grid grid-cols-1  mx-22 lg:grid-cols-3 gap-4">

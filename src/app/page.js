@@ -1,3 +1,4 @@
+
 import ProductCard from "@/component/ProductCard";
 import SummarTips from "@/component/SummarTips";
 import TopBrands from "@/component/TopBrands";
@@ -8,7 +9,7 @@ const Home = async () => {
   const datas = await jsonData()
   const productData = datas.slice(0, 3)
   return (
-    <div >
+    <div className="max-w-7xl mx-auto">
       {/* Banner site */}
       <div >
         <Image
@@ -38,7 +39,6 @@ const Home = async () => {
         <h2 className="text-4xl text-center py-7 font-bold text-slate-900">Top Brands</h2>
         <TopBrands></TopBrands>
       </div>
-
     </div>
   );
 }

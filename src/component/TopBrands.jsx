@@ -3,7 +3,7 @@ import React from 'react';
 
 const TopBrands = () => {
     return (
-        <div className='grid grid-cols-1 px-27 lg:px-0 lg:grid-cols-4 gap-4 '>
+        <div className='grid grid-cols-1 px-27 lg:px-0 lg:grid-cols-4 gap-4 max-w-7xl mx-auto'>
             <Card className="w-70  bg-white borderborder-orange-100 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all" variant="secondary ">
                 <p>🕶️</p>
         <Card.Header>

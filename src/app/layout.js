@@ -17,11 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className={`${geistSans.className}`}>
+      {/* className="bg-[#FFF8E7]" */}
       <body className="bg-[#FFF8E7]">
         <header className="sticky top-0 z-50">
           <Navbar />
         </header>
-        <main className="max-w-7xl mx-auto">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

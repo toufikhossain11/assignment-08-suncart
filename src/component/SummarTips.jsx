@@ -5,8 +5,8 @@ import Marquee from "react-fast-marquee";
 
 const SummarTips = () => {
     return (
-        <Marquee pauseOnHover={true}>
-                <div className="grid px-0 grid-cols-3 gap-4">
+        <Marquee pauseOnHover={true} className="max-w-7xl mx-auto">
+                <div className="grid px-0 grid-cols-3 gap-4 ">
 
             <Card className="w-[400px] border border-orange-100 shadow-md animate__slideInRight">
                 <Card.Header>
