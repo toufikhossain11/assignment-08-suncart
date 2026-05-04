@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌞 SunCart – Summer Essentials Store
 
-## Getting Started
+SunCart is a summer-themed eCommerce website where users can explore and view different seasonal products like sunglasses, skincare items, summer outfits, and beach accessories.
 
-First, run the development server:
+This project was built as an assignment using Next.js and modern frontend tools.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Live Link
+[https://assignment-08-suncart.vercel.app/]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔗 GitHub Repository
+[https://github.com/toufikhossain11/assignment-08-suncart]
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🚀 Features
+- Responsive design for mobile, tablet, and desktop
+- Hero banner section
+- Popular products section
+- Summer care tips section
+- Top brands section
+- Product details page
+- User authentication (Email/Password + Google Login)
+- Protected routes
+- User profile page
+- Update profile feature
+- Custom 404 page
+- Toast notifications
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technologies Used
+- :contentReference[oaicite:0]{index=0}
+- :contentReference[oaicite:1]{index=1}
+- :contentReference[oaicite:2]{index=2}
+- :contentReference[oaicite:3]{index=3}
+- :contentReference[oaicite:4]{index=4}
+- :contentReference[oaicite:5]{index=5}
+- :contentReference[oaicite:6]{index=6}
 
-## Learn More
+## 📦 NPM Packages Used
+- react-icons
+- react-toastify
+- @heroui/react
+- better-auth
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📌 Note
+This project is built for learning purposes and assignment submission.
