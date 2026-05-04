@@ -13,6 +13,7 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
 
@@ -31,7 +32,18 @@ export default function SignUpPage() {
       email,
       password,
       image,
-    })
+    },
+    {
+        onRequest: (ctx) => {
+            //show loading
+        },
+        onSuccess: (ctx) => {
+            toast.success("Wow so easy!")
+        },
+        onError: (ctx) => {
+            // display the error message
+            alert(ctx.error.message);
+        }})
 
 
     if (!error) {
@@ -39,6 +51,7 @@ export default function SignUpPage() {
     }
 
   };
+
   const handleGoogleRegister = async()=>{
     await authClient.signIn.social({
       provider:'google',

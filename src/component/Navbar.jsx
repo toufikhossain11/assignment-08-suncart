@@ -1,9 +1,17 @@
 "use client";
+import { authClient } from '@/lib/auth-client';
+import { Avatar } from '@heroui/react';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const userData = authClient.useSession()
+    const user = userData.data?.user
     const pathname = usePathname();
+
+    const handelLogout = async ()=>{
+        await authClient.signOut();
+    }
     return (
         <div className='bg-slate-900 '>
             <div className=" navbar  max-w-7xl mx-auto shadow-sm">
@@ -43,9 +51,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
-                    <Link href={'/login'} className="px-3 py-2 rounded-xl bg-orange-500 font-bold text-white" >Login</Link>
+                    {!user && <div>
 
-                    <Link href={'/register'} className="px-3 py-2 rounded-xl bg-red-500 font-bold text-white " >Register</Link>
+                        <Link href={'/login'} className="px-3 py-2 rounded-xl bg-orange-500 font-bold text-white" >Login</Link>
+
+                        <Link href={'/register'} className="px-3 py-2 rounded-xl bg-red-500 font-bold text-white ml-4" >Register</Link>
+                    </div>}
+                    {user && <div className='flex'>
+                        <Avatar>
+                            <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy='no-referrer' />
+                            <Avatar.Fallback>{user?.name[0]}</Avatar.Fallback>
+                        </Avatar>
+                        <div onClick={handelLogout} className="px-3 py-2 rounded-xl bg-red-500 font-bold text-white ml-4 cursor-pointer" >Logout</div>
+
+                    </div>}
                 </div>
             </div>
         </div>
