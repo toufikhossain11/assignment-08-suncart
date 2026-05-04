@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className={`${geistSans.className}`}>
+    <html suppressHydrationWarning={false} className={`${geistSans.className}`}>
       {/* className="bg-[#FFF8E7]" */}
       <body className="bg-[#FFF8E7]">
         <header className="sticky top-0 z-50">

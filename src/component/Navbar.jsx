@@ -45,7 +45,7 @@ const Navbar = () => {
                 <div className="navbar-end gap-4">
                     <Link href={'/login'} className="px-3 py-2 rounded-xl bg-orange-500 font-bold text-white" >Login</Link>
 
-                    <Link href={'/logout'} className="px-3 py-2 rounded-xl bg-orange-600 font-bold text-white " >Logout</Link>
+                    <Link href={'/register'} className="px-3 py-2 rounded-xl bg-red-500 font-bold text-white " >Register</Link>
                 </div>
             </div>
         </div>
