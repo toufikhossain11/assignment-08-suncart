@@ -12,10 +12,11 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignUpPage() {
 
-    const router = useRouter()
+  const router = useRouter()
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -25,24 +26,29 @@ export default function SignUpPage() {
     const image = e.target.image.value;
     const password = e.target.password.value;
 
-    const {data, error} = await authClient.signUp.email({
-        name,
-        email,
-        password,
-        image,
+    const { data, error } = await authClient.signUp.email({
+      name,
+      email,
+      password,
+      image,
     })
-    
-    console.log({data, error})
 
-    if(!error) {
-        router.push('/')
+
+    if (!error) {
+      router.push('/login')
     }
 
   };
+  const handleGoogleRegister = async()=>{
+    await authClient.signIn.social({
+      provider:'google',
+      callbackURL: "/login",
+    })
+  }
 
   return (
     <Card className=" shadow-lg mx-auto w-100 py-5 mt-5">
-      <h1 className="text-center text-2xl font-bold text-orange-500">Register</h1>
+      <h1 className="text-center text-2xl font-bold text-green-500">Register</h1>
 
       <Form className="flex mx-6 flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
@@ -109,6 +115,10 @@ export default function SignUpPage() {
           <Button type="reset" variant="secondary">
             Reset
           </Button>
+        </div>
+        <div className="grid grid-cols-1 justify-center items-center text-center mx-auto">
+          <p>Or</p>
+          <Button onClick={handleGoogleRegister } variant="outline" className={'w-80 mx-auto font-bold'}><GrGoogle/> Register With Google</Button>;
         </div>
       </Form>
 

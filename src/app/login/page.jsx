@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
+import { GrGoogle } from "react-icons/gr";
 
 
 const loginPage = () => {
@@ -10,21 +11,26 @@ const loginPage = () => {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
-        const { data, error } = await authClient.signUp.email({
+        const { data, error } = await authClient.signIn.email({
             email,
             password,
+            callbackURL: "/"
         })
         console.log(data, error)
     }
+    const handleGoogleLogin = async()=>{
+        await authClient.signIn.social({
+          provider:'google'
+        })
+      }
 
     return (
         <div>
             <Card className=" shadow-lg mx-auto w-100 py-5 mt-8">
-                <h1 className="text-center text-2xl font-bold text-orange-500">Login</h1>
+                <h1 className="text-center text-2xl font-bold text-orange-700">Login</h1>
 
                 <Form className="flex mx-6 flex-col gap-4" onSubmit={onSubmit}>
                     
-
                     <TextField
                         isRequired
                         name="email"
@@ -41,8 +47,6 @@ const loginPage = () => {
                         <Input placeholder="john@example.com" />
                         <FieldError />
                     </TextField>
-
-                    
 
                     <TextField
                         isRequired
@@ -80,6 +84,11 @@ const loginPage = () => {
                             Reset
                         </Button>
                     </div>
+                    <div className="grid grid-cols-1 justify-center items-center text-center mx-auto">
+                              <p>Or</p>
+                              <Button
+                              onClick={handleGoogleLogin } variant="outline" className={'w-80 mx-auto font-bold'}><GrGoogle/> LogIn With Google</Button>;
+                            </div>
                 </Form>
 
 
